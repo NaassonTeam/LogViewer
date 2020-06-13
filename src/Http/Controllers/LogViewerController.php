@@ -193,8 +193,11 @@ class LogViewerController extends Controller
      *
      * @return \Symfony\Component\HttpFoundation\BinaryFileResponse
      */
-    public function download($date)
+    public function download($date, $type)
     {
+
+        $this->settingsLogs($type);
+
         return $this->logViewer->download($date);
     }
 
@@ -210,6 +213,9 @@ class LogViewerController extends Controller
         abort_unless($request->ajax(), 405, 'Method Not Allowed');
 
         $date = $request->input('date');
+        $type = $request->input('type');
+
+        $this->settingsLogs($type);
 
         return response()->json([
             'result' => $this->logViewer->delete($date) ? 'success' : 'error'
