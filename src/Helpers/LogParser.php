@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Helpers;
+namespace NaassonTeam\LogViewer\Helpers;
 
-use Naasson\LogViewer\Utilities\LogLevels;
+use NaassonTeam\LogViewer\Utilities\LogLevels;
 use Illuminate\Support\Str;
 
 /**
  * Class     LogParser
  *
- * @package  Naasson\LogViewer\Helpers
+ * @package  NaassonTeam\LogViewer\Helpers
  * @author   NaassonTeam <info@naasson.com>
  */
 class LogParser

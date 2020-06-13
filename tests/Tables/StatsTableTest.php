@@ -127,7 +127,7 @@ class StatsTableTest extends TestCase
     public function it_can_get_stats_table_via_log_factory(): void
     {
         /** @var  \NaassonTeam\LogViewer\Contracts\Utilities\Factory  $logFactory */
-        $logFactory = $this->app->make(\Naasson\LogViewer\Contracts\Utilities\Factory::class);
+        $logFactory = $this->app->make(\NaassonTeam\LogViewer\Contracts\Utilities\Factory::class);
 
         static::assertTable($logFactory->statsTable());
     }
@@ -140,7 +140,7 @@ class StatsTableTest extends TestCase
     /**
      * Assert table instance.
      *
-     * @param  \Naasson\LogViewer\Contracts\Table  $table
+     * @param  \NaassonTeam\LogViewer\Contracts\Table  $table
      */
     protected static function assertTable(TableContract $table): void
     {
@@ -152,7 +152,7 @@ class StatsTableTest extends TestCase
     /**
      * Assert table header.
      *
-     * @param  \Naasson\LogViewer\Contracts\Table  $table
+     * @param  \NaassonTeam\LogViewer\Contracts\Table  $table
      */
     protected static function assertTableHeader(TableContract $table): void
     {
@@ -165,7 +165,7 @@ class StatsTableTest extends TestCase
     /**
      * Assert table rows.
      *
-     * @param  \Naasson\LogViewer\Contracts\Table  $table
+     * @param  \NaassonTeam\LogViewer\Contracts\Table  $table
      */
     protected static function assertTableRows(TableContract $table): void
     {
@@ -194,7 +194,7 @@ class StatsTableTest extends TestCase
     /**
      * Assert table footer.
      *
-     * @param  \Naasson\LogViewer\Contracts\Table  $table
+     * @param  \NaassonTeam\LogViewer\Contracts\Table  $table
      */
     protected static function assertTableFooter(TableContract $table): void
     {
@@ -211,20 +211,20 @@ class StatsTableTest extends TestCase
     /**
      * Get the LogViewer instance.
      *
-     * @return \Naasson\LogViewer\Contracts\LogViewer
+     * @return \NaassonTeam\LogViewer\Contracts\LogViewer
      */
     protected function getLogViewerInstance()
     {
-        return $this->app->make(\Naasson\LogViewer\Contracts\LogViewer::class);
+        return $this->app->make(\NaassonTeam\LogViewer\Contracts\LogViewer::class);
     }
 
     /**
      * Get the LogLevels instance.
      *
-     * @return \Naasson\LogViewer\Contracts\Utilities\LogLevels
+     * @return \NaassonTeam\LogViewer\Contracts\Utilities\LogLevels
      */
     protected function getLogLevelsInstance()
     {
-        return $this->app->make(\Naasson\LogViewer\Contracts\Utilities\LogLevels::class);
+        return $this->app->make(\NaassonTeam\LogViewer\Contracts\Utilities\LogLevels::class);
     }
 }

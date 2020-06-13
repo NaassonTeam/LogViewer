@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Http\Controllers;
+namespace NaassonTeam\LogViewer\Http\Controllers;
 
-use Naasson\LogViewer\Contracts\LogViewer as LogViewerContract;
-use Naasson\LogViewer\Entities\{LogEntry, LogEntryCollection};
-use Naasson\LogViewer\Exceptions\LogNotFoundException;
-use Naasson\LogViewer\Tables\StatsTable;
+use NaassonTeam\LogViewer\Contracts\LogViewer as LogViewerContract;
+use NaassonTeam\LogViewer\Entities\{LogEntry, LogEntryCollection};
+use NaassonTeam\LogViewer\Exceptions\LogNotFoundException;
+use NaassonTeam\LogViewer\Tables\StatsTable;
 use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Routing\Controller;
@@ -29,7 +29,7 @@ class LogViewerController extends Controller
     /**
      * The log viewer instance
      *
-     * @var \Naasson\LogViewer\Contracts\LogViewer
+     * @var \NaassonTeam\LogViewer\Contracts\LogViewer
      */
     protected $logViewer;
 
@@ -47,7 +47,7 @@ class LogViewerController extends Controller
     /**
      * LogViewerController constructor.
      *
-     * @param  \Naasson\LogViewer\Contracts\LogViewer  $logViewer
+     * @param  \NaassonTeam\LogViewer\Contracts\LogViewer  $logViewer
      */
     public function __construct(LogViewerContract $logViewer)
     {

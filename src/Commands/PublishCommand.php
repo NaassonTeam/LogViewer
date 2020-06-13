@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Commands;
+namespace NaassonTeam\LogViewer\Commands;
 
-use Naasson\LogViewer\LogViewerServiceProvider;
+use NaassonTeam\LogViewer\LogViewerServiceProvider;
 use Symfony\Component\Console\Input\InputOption;
 
 /**
  * Class     PublishCommand
  *
- * @package  Naasson\LogViewer\Commands
+ * @package  NaassonTeam\LogViewer\Commands
  * @author   NaassonTeam <info@naasson.com>
  */
 class PublishCommand extends Command

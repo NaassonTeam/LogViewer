@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Utilities;
+namespace NaassonTeam\LogViewer\Utilities;
 
-use Naasson\LogViewer\Contracts\Utilities\LogMenu as LogMenuContract;
-use Naasson\LogViewer\Contracts\Utilities\LogStyler as LogStylerContract;
-use Naasson\LogViewer\Entities\Log;
+use NaassonTeam\LogViewer\Contracts\Utilities\LogMenu as LogMenuContract;
+use NaassonTeam\LogViewer\Contracts\Utilities\LogStyler as LogStylerContract;
+use NaassonTeam\LogViewer\Entities\Log;
 use Illuminate\Contracts\Config\Repository as ConfigContract;
 
 /**
  * Class     LogMenu
  *
- * @package  Naasson\LogViewer\Utilities
+ * @package  NaassonTeam\LogViewer\Utilities
  * @author   NaassonTeam <info@naasson.com>
  */
 class LogMenu implements LogMenuContract
@@ -32,7 +32,7 @@ class LogMenu implements LogMenuContract
     /**
      * The log styler instance.
      *
-     * @var \Naasson\LogViewer\Contracts\Utilities\LogStyler
+     * @var \NaassonTeam\LogViewer\Contracts\Utilities\LogStyler
      */
     private $styler;
 
@@ -45,7 +45,7 @@ class LogMenu implements LogMenuContract
      * LogMenu constructor.
      *
      * @param  \Illuminate\Contracts\Config\Repository             $config
-     * @param  \Naasson\LogViewer\Contracts\Utilities\LogStyler  $styler
+     * @param  \NaassonTeam\LogViewer\Contracts\Utilities\LogStyler  $styler
      */
     public function __construct(ConfigContract $config, LogStylerContract $styler)
     {
@@ -75,7 +75,7 @@ class LogMenu implements LogMenuContract
     /**
      * Set the log styler instance.
      *
-     * @param  \Naasson\LogViewer\Contracts\Utilities\LogStyler  $styler
+     * @param  \NaassonTeam\LogViewer\Contracts\Utilities\LogStyler  $styler
      *
      * @return self
      */
@@ -94,7 +94,7 @@ class LogMenu implements LogMenuContract
     /**
      * Make log menu.
      *
-     * @param  \Naasson\LogViewer\Entities\Log  $log
+     * @param  \NaassonTeam\LogViewer\Entities\Log  $log
      * @param  bool                               $trans
      *
      * @return array

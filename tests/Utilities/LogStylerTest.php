@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Tests\Utilities;
+namespace NaassonTeam\LogViewer\Tests\Utilities;
 
-use Naasson\LogViewer\Tests\TestCase;
-use Naasson\LogViewer\Utilities\LogStyler;
+use NaassonTeam\LogViewer\Tests\TestCase;
+use NaassonTeam\LogViewer\Utilities\LogStyler;
 use Illuminate\Support\HtmlString;
 
 /**
  * Class     LogStylerTest
  *
- * @package  Naasson\LogViewer\Tests\Utilities
+ * @package  NaassonTeam\LogViewer\Tests\Utilities
  * @author   NaassonTeam <info@naasson.com>
  */
 class LogStylerTest extends TestCase
@@ -21,7 +21,7 @@ class LogStylerTest extends TestCase
      | -----------------------------------------------------------------
      */
 
-    /** @var  \Naasson\LogViewer\Utilities\LogStyler */
+    /** @var  \NaassonTeam\LogViewer\Utilities\LogStyler */
     private $styler;
 
     /* -----------------------------------------------------------------
@@ -33,7 +33,7 @@ class LogStylerTest extends TestCase
     {
         parent::setUp();
 
-        $this->styler = $this->app->make(\Naasson\LogViewer\Contracts\Utilities\LogStyler::class);
+        $this->styler = $this->app->make(\NaassonTeam\LogViewer\Contracts\Utilities\LogStyler::class);
     }
 
     protected function tearDown(): void

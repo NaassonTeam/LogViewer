@@ -2,17 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Entities;
+namespace NaassonTeam\LogViewer\Entities;
 
-use Naasson\LogViewer\Contracts\Utilities\Filesystem as FilesystemContract;
-use Naasson\LogViewer\Exceptions\LogNotFoundException;
+use NaassonTeam\LogViewer\Contracts\Utilities\Filesystem as FilesystemContract;
+use NaassonTeam\LogViewer\Exceptions\LogNotFoundException;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\LazyCollection;
 
 /**
  * Class     LogCollection
  *
- * @package  Naasson\LogViewer\Entities
+ * @package  NaassonTeam\LogViewer\Entities
  * @author   NaassonTeam <info@naasson.com>
  */
 class LogCollection extends LazyCollection
@@ -22,7 +22,7 @@ class LogCollection extends LazyCollection
      | -----------------------------------------------------------------
      */
 
-    /** @var \Naasson\LogViewer\Contracts\Utilities\Filesystem */
+    /** @var \NaassonTeam\LogViewer\Contracts\Utilities\Filesystem */
     private $filesystem;
 
     /* -----------------------------------------------------------------
@@ -57,9 +57,9 @@ class LogCollection extends LazyCollection
     /**
      * Set the filesystem instance.
      *
-     * @param  \Naasson\LogViewer\Contracts\Utilities\Filesystem  $filesystem
+     * @param  \NaassonTeam\LogViewer\Contracts\Utilities\Filesystem  $filesystem
      *
-     * @return \Naasson\LogViewer\Entities\LogCollection
+     * @return \NaassonTeam\LogViewer\Entities\LogCollection
      */
     public function setFilesystem(FilesystemContract $filesystem)
     {
@@ -79,9 +79,9 @@ class LogCollection extends LazyCollection
      * @param  string      $date
      * @param  mixed|null  $default
      *
-     * @return \Naasson\LogViewer\Entities\Log
+     * @return \NaassonTeam\LogViewer\Entities\Log
      *
-     * @throws \Naasson\LogViewer\Exceptions\LogNotFoundException
+     * @throws \NaassonTeam\LogViewer\Exceptions\LogNotFoundException
      */
     public function get($date, $default = null)
     {
@@ -119,7 +119,7 @@ class LogCollection extends LazyCollection
      *
      * @param  string  $date
      *
-     * @return \Naasson\LogViewer\Entities\Log
+     * @return \NaassonTeam\LogViewer\Entities\Log
      */
     public function log($date)
     {
@@ -133,7 +133,7 @@ class LogCollection extends LazyCollection
      * @param  string  $date
      * @param  string  $level
      *
-     * @return \Naasson\LogViewer\Entities\LogEntryCollection
+     * @return \NaassonTeam\LogViewer\Entities\LogEntryCollection
      */
     public function entries($date, $level = 'all')
     {
@@ -150,7 +150,7 @@ class LogCollection extends LazyCollection
         $stats = [];
 
         foreach ($this->all() as $date => $log) {
-            /** @var \Naasson\LogViewer\Entities\Log $log */
+            /** @var \NaassonTeam\LogViewer\Entities\Log $log */
             $stats[$date] = $log->stats();
         }
 
@@ -193,7 +193,7 @@ class LogCollection extends LazyCollection
         $tree = [];
 
         foreach ($this->all() as $date => $log) {
-            /** @var \Naasson\LogViewer\Entities\Log $log */
+            /** @var \NaassonTeam\LogViewer\Entities\Log $log */
             $tree[$date] = $log->tree($trans);
         }
 
@@ -212,7 +212,7 @@ class LogCollection extends LazyCollection
         $menu = [];
 
         foreach ($this->all() as $date => $log) {
-            /** @var \Naasson\LogViewer\Entities\Log $log */
+            /** @var \NaassonTeam\LogViewer\Entities\Log $log */
             $menu[$date] = $log->menu($trans);
         }
 

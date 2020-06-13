@@ -20,7 +20,7 @@ class FilesystemTest extends TestCase
      | -----------------------------------------------------------------
      */
 
-    /** @var  \Naasson\LogViewer\Utilities\Filesystem */
+    /** @var  \NaassonTeam\LogViewer\Utilities\Filesystem */
     private $filesystem;
 
     /* -----------------------------------------------------------------
@@ -177,7 +177,7 @@ class FilesystemTest extends TestCase
     /** @test */
     public function it_must_throw_a_filesystem_exception_on_read(): void
     {
-        $this->expectException(\Naasson\LogViewer\Exceptions\FilesystemException::class);
+        $this->expectException(\NaassonTeam\LogViewer\Exceptions\FilesystemException::class);
 
         $this->filesystem->read('2222-11-11'); // Future FTW
     }
@@ -185,7 +185,7 @@ class FilesystemTest extends TestCase
     /** @test */
     public function it_must_throw_a_filesystem_exception_on_delete(): void
     {
-        $this->expectException(\Naasson\LogViewer\Exceptions\FilesystemException::class);
+        $this->expectException(\NaassonTeam\LogViewer\Exceptions\FilesystemException::class);
 
         $this->filesystem->delete('2222-11-11'); // Future FTW
     }

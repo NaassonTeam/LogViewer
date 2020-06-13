@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Entities;
+namespace NaassonTeam\LogViewer\Entities;
 
 use Illuminate\Contracts\Support\{Arrayable, Jsonable};
 use Illuminate\Support\Carbon;
@@ -12,7 +12,7 @@ use SplFileInfo;
 /**
  * Class     Log
  *
- * @package  Naasson\LogViewer\Entities
+ * @package  NaassonTeam\LogViewer\Entities
  * @author   NaassonTeam <info@naasson.com>
  */
 class Log implements Arrayable, Jsonable, JsonSerializable
@@ -28,7 +28,7 @@ class Log implements Arrayable, Jsonable, JsonSerializable
     /** @var string */
     private $path;
 
-    /** @var \Naasson\LogViewer\Entities\LogEntryCollection */
+    /** @var \NaassonTeam\LogViewer\Entities\LogEntryCollection */
     private $entries;
 
     /** @var \SplFileInfo */
@@ -133,7 +133,7 @@ class Log implements Arrayable, Jsonable, JsonSerializable
      *
      * @param  string  $level
      *
-     * @return \Naasson\LogViewer\Entities\LogEntryCollection
+     * @return \NaassonTeam\LogViewer\Entities\LogEntryCollection
      */
     public function entries($level = 'all')
     {
@@ -147,7 +147,7 @@ class Log implements Arrayable, Jsonable, JsonSerializable
      *
      * @param  string  $level
      *
-     * @return \Naasson\LogViewer\Entities\LogEntryCollection
+     * @return \NaassonTeam\LogViewer\Entities\LogEntryCollection
      */
     public function getByLevel($level)
     {

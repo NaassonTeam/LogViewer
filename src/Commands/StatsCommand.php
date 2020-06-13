@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Commands;
+namespace NaassonTeam\LogViewer\Commands;
 
-use Naasson\LogViewer\Tables\StatsTable;
+use NaassonTeam\LogViewer\Tables\StatsTable;
 
 /**
  * Class     StatsCommand
  *
- * @package  Naasson\LogViewer\Commands
+ * @package  NaassonTeam\LogViewer\Commands
  * @author   NaassonTeam <info@naasson.com>
  */
 class StatsCommand extends Command
@@ -70,7 +70,7 @@ class StatsCommand extends Command
     /**
      * Prepare footer.
      *
-     * @param  \Naasson\LogViewer\Tables\StatsTable  $stats
+     * @param  \NaassonTeam\LogViewer\Tables\StatsTable  $stats
      *
      * @return array
      */

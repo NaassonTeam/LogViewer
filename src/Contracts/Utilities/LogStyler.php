@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Contracts\Utilities;
+namespace NaassonTeam\LogViewer\Contracts\Utilities;
 
 /**
  * Interface  LogStyler
  *
- * @package   Naasson\LogViewer\Contracts\Utilities
+ * @package   NaassonTeam\LogViewer\Contracts\Utilities
  * @author    NaassonTeam <info@naasson.com>
  */
 interface LogStyler

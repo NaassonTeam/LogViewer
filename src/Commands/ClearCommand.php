@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Commands;
+namespace NaassonTeam\LogViewer\Commands;
 
 /**
  * Class     ClearCommand
  *
- * @package  Naasson\LogViewer\Commands
+ * @package  NaassonTeam\LogViewer\Commands
  * @author   NaassonTeam <info@naasson.com>
  */
 class ClearCommand extends Command

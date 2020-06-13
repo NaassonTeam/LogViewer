@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Contracts\Utilities;
+namespace NaassonTeam\LogViewer\Contracts\Utilities;
 
-use Naasson\LogViewer\Contracts\Patternable;
+use NaassonTeam\LogViewer\Contracts\Patternable;
 
 /**
  * Interface  Factory
  *
- * @package   Naasson\LogViewer\Contracts\Utilities
+ * @package   NaassonTeam\LogViewer\Contracts\Utilities
  * @author    NaassonTeam <info@naasson.com>
  */
 interface Factory extends Patternable
@@ -22,14 +22,14 @@ interface Factory extends Patternable
     /**
      * Get the filesystem instance.
      *
-     * @return \Naasson\LogViewer\Contracts\Utilities\Filesystem
+     * @return \NaassonTeam\LogViewer\Contracts\Utilities\Filesystem
      */
     public function getFilesystem();
 
     /**
      * Set the filesystem instance.
      *
-     * @param  \Naasson\LogViewer\Contracts\Utilities\Filesystem  $filesystem
+     * @param  \NaassonTeam\LogViewer\Contracts\Utilities\Filesystem  $filesystem
      *
      * @return self
      */
@@ -38,14 +38,14 @@ interface Factory extends Patternable
     /**
      * Get the log levels instance.
      *
-     * @return  \Naasson\LogViewer\Contracts\Utilities\LogLevels  $levels
+     * @return  \NaassonTeam\LogViewer\Contracts\Utilities\LogLevels  $levels
      */
     public function getLevels();
 
     /**
      * Set the log levels instance.
      *
-     * @param  \Naasson\LogViewer\Contracts\Utilities\LogLevels  $levels
+     * @param  \NaassonTeam\LogViewer\Contracts\Utilities\LogLevels  $levels
      *
      * @return self
      */
@@ -63,7 +63,7 @@ interface Factory extends Patternable
     /**
      * Get all logs.
      *
-     * @return \Naasson\LogViewer\Entities\LogCollection
+     * @return \NaassonTeam\LogViewer\Entities\LogCollection
      */
     public function logs();
 
@@ -77,7 +77,7 @@ interface Factory extends Patternable
      *
      * @see logs
      *
-     * @return \Naasson\LogViewer\Entities\LogCollection
+     * @return \NaassonTeam\LogViewer\Entities\LogCollection
      */
     public function all();
 
@@ -95,7 +95,7 @@ interface Factory extends Patternable
      *
      * @param  string  $date
      *
-     * @return \Naasson\LogViewer\Entities\Log
+     * @return \NaassonTeam\LogViewer\Entities\Log
      */
     public function log($date);
 
@@ -104,7 +104,7 @@ interface Factory extends Patternable
      *
      * @param  string  $date
      *
-     * @return \Naasson\LogViewer\Entities\Log
+     * @return \NaassonTeam\LogViewer\Entities\Log
      */
     public function get($date);
 
@@ -114,7 +114,7 @@ interface Factory extends Patternable
      * @param  string  $date
      * @param  string  $level
      *
-     * @return \Naasson\LogViewer\Entities\LogEntryCollection
+     * @return \NaassonTeam\LogViewer\Entities\LogEntryCollection
      */
     public function entries($date, $level = 'all');
 
@@ -171,7 +171,7 @@ interface Factory extends Patternable
      *
      * @param  string|null  $locale
      *
-     * @return \Naasson\LogViewer\Tables\StatsTable
+     * @return \NaassonTeam\LogViewer\Tables\StatsTable
      */
     public function statsTable($locale = null);
 

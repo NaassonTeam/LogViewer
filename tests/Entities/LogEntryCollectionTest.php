@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Tests\Entities;
+namespace NaassonTeam\LogViewer\Tests\Entities;
 
-use Naasson\LogViewer\Entities\LogEntryCollection;
-use Naasson\LogViewer\Tests\TestCase;
+use NaassonTeam\LogViewer\Entities\LogEntryCollection;
+use NaassonTeam\LogViewer\Tests\TestCase;
 
 /**
  * Class     LogEntryCollectionTest
  *
- * @package  Naasson\LogViewer\Tests\Entities
+ * @package  NaassonTeam\LogViewer\Tests\Entities
  * @author   NaassonTeam <info@naasson.com>
  */
 class LogEntryCollectionTest extends TestCase
@@ -20,7 +20,7 @@ class LogEntryCollectionTest extends TestCase
      | -----------------------------------------------------------------
      */
 
-    /** @var  \Naasson\LogViewer\Entities\LogEntryCollection */
+    /** @var  \NaassonTeam\LogViewer\Entities\LogEntryCollection */
     private $entries;
 
     /* -----------------------------------------------------------------
@@ -125,7 +125,7 @@ class LogEntryCollectionTest extends TestCase
      *
      * @param  string  $date
      *
-     * @return \Naasson\LogViewer\Entities\LogEntryCollection
+     * @return \NaassonTeam\LogViewer\Entities\LogEntryCollection
      */
     private function getEntries($date)
     {

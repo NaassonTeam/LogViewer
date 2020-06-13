@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Utilities;
+namespace NaassonTeam\LogViewer\Utilities;
 
-use Naasson\LogViewer\Contracts\Utilities\LogStyler as LogStylerContract;
+use NaassonTeam\LogViewer\Contracts\Utilities\LogStyler as LogStylerContract;
 use Illuminate\Contracts\Config\Repository as ConfigContract;
 use Illuminate\Support\HtmlString;
 
 /**
  * Class     LogStyler
  *
- * @package  Naasson\LogViewer\Utilities
+ * @package  NaassonTeam\LogViewer\Utilities
  * @author   NaassonTeam <info@naasson.com>
  */
 class LogStyler implements LogStylerContract

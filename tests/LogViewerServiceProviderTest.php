@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace NaassonTeam\LogViewer\Tests;
 
-use Naasson\LogViewer\LogViewerServiceProvider;
+use NaassonTeam\LogViewer\LogViewerServiceProvider;
 
 /**
  * Class     LogViewerServiceProviderTest
  *
- * @package  Naasson\LogViewer\Tests
+ * @package  NaassonTeam\LogViewer\Tests
  * @author   NaassonTeam <info@naasson.com>
  */
 class LogViewerServiceProviderTest extends TestCase
@@ -51,8 +51,8 @@ class LogViewerServiceProviderTest extends TestCase
     {
         $expectations = [
             \Illuminate\Support\ServiceProvider::class,
-            \Naasson\Support\Providers\ServiceProvider::class,
-            \Naasson\Support\Providers\PackageServiceProvider::class,
+            \Arcanedev\Support\Providers\ServiceProvider::class,
+            \Arcanedev\Support\Providers\PackageServiceProvider::class,
             LogViewerServiceProvider::class,
         ];
 

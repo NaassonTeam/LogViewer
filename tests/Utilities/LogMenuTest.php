@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Tests\Utilities;
+namespace NaassonTeam\LogViewer\Tests\Utilities;
 
-use Naasson\LogViewer\Tests\TestCase;
-use Naasson\LogViewer\Utilities\LogMenu;
+use NaassonTeam\LogViewer\Tests\TestCase;
+use NaassonTeam\LogViewer\Utilities\LogMenu;
 
 /**
  * Class     LogMenuTest
  *
- * @package  Naasson\LogViewer\Tests\Utilities
+ * @package  NaassonTeam\LogViewer\Tests\Utilities
  * @author   NaassonTeam <info@naasson.com>
  */
 class LogMenuTest extends TestCase
@@ -20,7 +20,7 @@ class LogMenuTest extends TestCase
      | -----------------------------------------------------------------
      */
 
-    /** @var  \Naasson\LogViewer\Utilities\LogMenu */
+    /** @var  \NaassonTeam\LogViewer\Utilities\LogMenu */
     private $menu;
 
     /* -----------------------------------------------------------------
@@ -32,7 +32,7 @@ class LogMenuTest extends TestCase
     {
         parent::setUp();
 
-        $this->menu = $this->app->make(\Naasson\LogViewer\Contracts\Utilities\LogMenu::class);
+        $this->menu = $this->app->make(\NaassonTeam\LogViewer\Contracts\Utilities\LogMenu::class);
     }
 
     protected function tearDown(): void

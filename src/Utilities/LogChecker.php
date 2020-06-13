@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Utilities;
+namespace NaassonTeam\LogViewer\Utilities;
 
-use Naasson\LogViewer\Contracts\Utilities\Filesystem as FilesystemContract;
-use Naasson\LogViewer\Contracts\Utilities\LogChecker as LogCheckerContract;
+use NaassonTeam\LogViewer\Contracts\Utilities\Filesystem as FilesystemContract;
+use NaassonTeam\LogViewer\Contracts\Utilities\LogChecker as LogCheckerContract;
 use Illuminate\Contracts\Config\Repository as ConfigContract;
 
 /**
  * Class     LogChecker
  *
- * @package  Naasson\LogViewer\Utilities
+ * @package  NaassonTeam\LogViewer\Utilities
  * @author   NaassonTeam <info@naasson.com>
  */
 class LogChecker implements LogCheckerContract
@@ -31,7 +31,7 @@ class LogChecker implements LogCheckerContract
     /**
      * The filesystem instance.
      *
-     * @var \Naasson\LogViewer\Contracts\Utilities\Filesystem
+     * @var \NaassonTeam\LogViewer\Contracts\Utilities\Filesystem
      */
     private $filesystem;
 
@@ -72,7 +72,7 @@ class LogChecker implements LogCheckerContract
      * LogChecker constructor.
      *
      * @param  \Illuminate\Contracts\Config\Repository              $config
-     * @param  \Naasson\LogViewer\Contracts\Utilities\Filesystem  $filesystem
+     * @param  \NaassonTeam\LogViewer\Contracts\Utilities\Filesystem  $filesystem
      */
     public function __construct(ConfigContract $config, FilesystemContract $filesystem)
     {
@@ -103,7 +103,7 @@ class LogChecker implements LogCheckerContract
     /**
      * Set the Filesystem instance.
      *
-     * @param  \Naasson\LogViewer\Contracts\Utilities\Filesystem  $filesystem
+     * @param  \NaassonTeam\LogViewer\Contracts\Utilities\Filesystem  $filesystem
      *
      * @return self
      */
@@ -222,7 +222,7 @@ class LogChecker implements LogCheckerContract
     /**
      * Refresh the checks.
      *
-     * @return \Naasson\LogViewer\Utilities\LogChecker
+     * @return \NaassonTeam\LogViewer\Utilities\LogChecker
      */
     private function refresh()
     {

@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Tests;
+namespace NaassonTeam\LogViewer\Tests;
 
-use Naasson\LogViewer\Entities\Log;
-use Naasson\LogViewer\Entities\LogEntry;
-use Naasson\LogViewer\Entities\LogEntryCollection;
-use Naasson\LogViewer\Helpers\LogParser;
+use NaassonTeam\LogViewer\Entities\Log;
+use NaassonTeam\LogViewer\Entities\LogEntry;
+use NaassonTeam\LogViewer\Entities\LogEntryCollection;
+use NaassonTeam\LogViewer\Helpers\LogParser;
 use Carbon\Carbon;
 use Illuminate\Support\Arr;
 use Orchestra\Testbench\TestCase as BaseTestCase;
@@ -17,7 +17,7 @@ use ReflectionClass;
 /**
  * Class     TestCase
  *
- * @package  Naasson\LogViewer\Tests
+ * @package  NaassonTeam\LogViewer\Tests
  * @author   NaassonTeam <info@naasson.com>
  */
 abstract class TestCase extends BaseTestCase
@@ -65,8 +65,8 @@ abstract class TestCase extends BaseTestCase
     protected function getPackageProviders($app): array
     {
         return [
-            \Naasson\LogViewer\LogViewerServiceProvider::class,
-            \Naasson\LogViewer\Providers\DeferredServicesProvider::class,
+            \NaassonTeam\LogViewer\LogViewerServiceProvider::class,
+            \NaassonTeam\LogViewer\Providers\DeferredServicesProvider::class,
         ];
     }
 
@@ -108,7 +108,7 @@ abstract class TestCase extends BaseTestCase
     /**
      * Assert Log object.
      *
-     * @param  \Naasson\LogViewer\Entities\Log  $log
+     * @param  \NaassonTeam\LogViewer\Entities\Log  $log
      * @param  string                             $date
      */
     protected static function assertLog(Log $log, $date): void
@@ -121,7 +121,7 @@ abstract class TestCase extends BaseTestCase
      * Assert Log entries object.
      *
      * @param  string                                            $date
-     * @param  \Naasson\LogViewer\Entities\LogEntryCollection  $entries
+     * @param  \NaassonTeam\LogViewer\Entities\LogEntryCollection  $entries
      */
     protected static function assertLogEntries($date, LogEntryCollection $entries): void
     {
@@ -134,7 +134,7 @@ abstract class TestCase extends BaseTestCase
      * Assert log entry object.
      *
      * @param  string                                  $date
-     * @param  \Naasson\LogViewer\Entities\LogEntry  $entry
+     * @param  \NaassonTeam\LogViewer\Entities\LogEntry  $entry
      */
     protected static function assertLogEntry($date, LogEntry $entry): void
     {
@@ -279,11 +279,11 @@ abstract class TestCase extends BaseTestCase
     /**
      * Get Filesystem Utility instance.
      *
-     * @return \Naasson\LogViewer\Utilities\Filesystem
+     * @return \NaassonTeam\LogViewer\Utilities\Filesystem
      */
     protected function filesystem()
     {
-        return $this->app->make(\Naasson\LogViewer\Contracts\Utilities\Filesystem::class);
+        return $this->app->make(\NaassonTeam\LogViewer\Contracts\Utilities\Filesystem::class);
     }
 
     /**
@@ -345,7 +345,7 @@ abstract class TestCase extends BaseTestCase
      *
      * @param  string  $date
      *
-     * @return \Naasson\LogViewer\Entities\Log
+     * @return \NaassonTeam\LogViewer\Entities\Log
      */
     protected function getLog($date)
     {

@@ -1,6 +1,6 @@
 <?php
 
-use Naasson\LogViewer\Contracts\Utilities\Filesystem;
+use NaassonTeam\LogViewer\Contracts\Utilities\Filesystem;
 
 return [
 

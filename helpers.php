@@ -1,12 +1,12 @@
 <?php
 
-use Naasson\LogViewer\Contracts;
+use NaassonTeam\LogViewer\Contracts;
 
 if ( ! function_exists('log_viewer')) {
     /**
      * Get the LogViewer instance.
      *
-     * @return Naasson\LogViewer\Contracts\LogViewer
+     * @return NaassonTeam\LogViewer\Contracts\LogViewer
      */
     function log_viewer()
     {
@@ -18,7 +18,7 @@ if ( ! function_exists('log_levels')) {
     /**
      * Get the LogLevels instance.
      *
-     * @return Naasson\LogViewer\Contracts\Utilities\LogLevels
+     * @return NaassonTeam\LogViewer\Contracts\Utilities\LogLevels
      */
     function log_levels()
     {
@@ -30,7 +30,7 @@ if ( ! function_exists('log_menu')) {
     /**
      * Get the LogMenu instance.
      *
-     * @return Naasson\LogViewer\Contracts\Utilities\LogMenu
+     * @return NaassonTeam\LogViewer\Contracts\Utilities\LogMenu
      */
     function log_menu()
     {
@@ -42,7 +42,7 @@ if ( ! function_exists('log_styler')) {
     /**
      * Get the LogStyler instance.
      *
-     * @return Naasson\LogViewer\Contracts\Utilities\LogStyler
+     * @return NaassonTeam\LogViewer\Contracts\Utilities\LogStyler
      */
     function log_styler()
     {

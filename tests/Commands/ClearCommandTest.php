@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Tests\Commands;
+namespace NaassonTeam\LogViewer\Tests\Commands;
 
-use Naasson\LogViewer\Tests\TestCase;
+use NaassonTeam\LogViewer\Tests\TestCase;
 
 /**
  * Class     ClearCommandTest
  *
- * @package  Naasson\LogViewer\Tests\Commands
+ * @package  NaassonTeam\LogViewer\Tests\Commands
  * @author   NaassonTeam <info@naasson.com>
  */
 class ClearCommandTest extends TestCase
@@ -19,7 +19,7 @@ class ClearCommandTest extends TestCase
      | -----------------------------------------------------------------
      */
 
-    /** @var  \Naasson\LogViewer\LogViewer */
+    /** @var  \NaassonTeam\LogViewer\LogViewer */
     private $logViewer;
 
     /** @var  string */
@@ -34,7 +34,7 @@ class ClearCommandTest extends TestCase
     {
         parent::setUp();
 
-        $this->logViewer = $this->app->make(\Naasson\LogViewer\Contracts\LogViewer::class);
+        $this->logViewer = $this->app->make(\NaassonTeam\LogViewer\Contracts\LogViewer::class);
         $this->path      = storage_path('logs-to-clear');
 
         $this->setupForTests();

@@ -319,7 +319,7 @@ class Filesystem implements FilesystemContract
      *
      * @return string
      *
-     * @throws \Naasson\LogViewer\Exceptions\FilesystemException
+     * @throws \NaassonTeam\LogViewer\Exceptions\FilesystemException
      */
     private function getLogPath(string $date)
     {

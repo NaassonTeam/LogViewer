@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Contracts\Utilities;
+namespace NaassonTeam\LogViewer\Contracts\Utilities;
 
 use Illuminate\Contracts\Config\Repository as ConfigContract;
 
 /**
  * Interface  LogChecker
  *
- * @package   Naasson\LogViewer\Contracts\Utilities
+ * @package   NaassonTeam\LogViewer\Contracts\Utilities
  * @author    NaassonTeam <info@naasson.com>
  */
 interface LogChecker
@@ -45,7 +45,7 @@ interface LogChecker
     /**
      * Set the Filesystem instance.
      *
-     * @param  \Naasson\LogViewer\Contracts\Utilities\Filesystem  $filesystem
+     * @param  \NaassonTeam\LogViewer\Contracts\Utilities\Filesystem  $filesystem
      *
      * @return self
      */

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Entities;
+namespace NaassonTeam\LogViewer\Entities;
 
-use Naasson\LogViewer\Helpers\LogParser;
+use NaassonTeam\LogViewer\Helpers\LogParser;
 use Carbon\Carbon;
 use Illuminate\Contracts\Support\{Arrayable, Jsonable};
 use JsonSerializable;
@@ -12,7 +12,7 @@ use JsonSerializable;
 /**
  * Class     LogEntry
  *
- * @package  Naasson\LogViewer\Entities
+ * @package  NaassonTeam\LogViewer\Entities
  * @author   NaassonTeam <info@naasson.com>
  */
 class LogEntry implements Arrayable, Jsonable, JsonSerializable
@@ -129,7 +129,7 @@ class LogEntry implements Arrayable, Jsonable, JsonSerializable
      *
      * @param  string  $datetime
      *
-     * @return \Naasson\LogViewer\Entities\LogEntry
+     * @return \NaassonTeam\LogViewer\Entities\LogEntry
      */
     private function setDatetime($datetime)
     {

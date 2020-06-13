@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Commands;
+namespace NaassonTeam\LogViewer\Commands;
 
-use Naasson\LogViewer\Contracts\LogViewer as LogViewerContract;
-use Naasson\Support\Console\Command as BaseCommand;
+use NaassonTeam\LogViewer\Contracts\LogViewer as LogViewerContract;
+use Arcanedev\Support\Console\Command as BaseCommand;
 
 /**
  * Class     Command
  *
- * @package  Naasson\LogViewer\Bases
+ * @package  NaassonTeam\LogViewer\Bases
  * @author   NaassonTeam <info@naasson.com>
  */
 abstract class Command extends BaseCommand
@@ -20,7 +20,7 @@ abstract class Command extends BaseCommand
      | -----------------------------------------------------------------
      */
 
-    /** @var \Naasson\LogViewer\Contracts\LogViewer */
+    /** @var \NaassonTeam\LogViewer\Contracts\LogViewer */
     protected $logViewer;
 
     /* -----------------------------------------------------------------
@@ -31,7 +31,7 @@ abstract class Command extends BaseCommand
     /**
      * Create the command instance.
      *
-     * @param  \Naasson\LogViewer\Contracts\LogViewer  $logViewer
+     * @param  \NaassonTeam\LogViewer\Contracts\LogViewer  $logViewer
      */
     public function __construct(LogViewerContract $logViewer)
     {

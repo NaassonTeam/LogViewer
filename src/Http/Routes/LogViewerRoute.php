@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Http\Routes;
+namespace NaassonTeam\LogViewer\Http\Routes;
 
-use Naasson\Support\Routing\RouteRegistrar;
+use Arcanedev\Support\Routing\RouteRegistrar;
 
 /**
  * Class     LogViewerRoute
  *
- * @package  Naasson\LogViewer\Http\Routes
+ * @package  NaassonTeam\LogViewer\Http\Routes
  * @author   NaassonTeam <info@naasson.com>
  *
  * @codeCoverageIgnore

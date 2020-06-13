@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Tables;
+namespace NaassonTeam\LogViewer\Tables;
 
-use Naasson\LogViewer\Contracts\Utilities\LogLevels as LogLevelsContract;
+use NaassonTeam\LogViewer\Contracts\Utilities\LogLevels as LogLevelsContract;
 use Illuminate\Support\{Arr, Collection};
 
 /**
  * Class     StatsTable
  *
- * @package  Naasson\LogViewer\Tables
+ * @package  NaassonTeam\LogViewer\Tables
  * @author   NaassonTeam <info@naasson.com>
  */
 class StatsTable extends AbstractTable
@@ -24,7 +24,7 @@ class StatsTable extends AbstractTable
      * Make a stats table instance.
      *
      * @param  array                                               $data
-     * @param  \Naasson\LogViewer\Contracts\Utilities\LogLevels  $levels
+     * @param  \NaassonTeam\LogViewer\Contracts\Utilities\LogLevels  $levels
      * @param  string|null                                         $locale
      *
      * @return $this

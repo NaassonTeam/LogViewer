@@ -1,12 +1,12 @@
-<?php namespace Naasson\LogViewer\Providers;
+<?php namespace NaassonTeam\LogViewer\Providers;
 
-use Naasson\LogViewer\Http\Routes\LogViewerRoute;
-use Naasson\Support\Providers\RouteServiceProvider as ServiceProvider;
+use NaassonTeam\LogViewer\Http\Routes\LogViewerRoute;
+use Arcanedev\Support\Providers\RouteServiceProvider as ServiceProvider;
 
 /**
  * Class     RouteServiceProvider
  *
- * @package  Naasson\LogViewer\Providers
+ * @package  NaassonTeam\LogViewer\Providers
  * @author   NaassonTeam <info@naasson.com>
  */
 class RouteServiceProvider extends ServiceProvider

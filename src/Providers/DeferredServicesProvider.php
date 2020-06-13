@@ -2,24 +2,24 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Providers;
+namespace NaassonTeam\LogViewer\Providers;
 
-use Naasson\LogViewer\Contracts\LogViewer as LogViewerContract;
-use Naasson\LogViewer\Contracts\Utilities\Factory as FactoryContract;
-use Naasson\LogViewer\Contracts\Utilities\Filesystem as FilesystemContract;
-use Naasson\LogViewer\Contracts\Utilities\LogChecker as LogCheckerContract;
-use Naasson\LogViewer\Contracts\Utilities\LogLevels as LogLevelsContract;
-use Naasson\LogViewer\Contracts\Utilities\LogMenu as LogMenuContract;
-use Naasson\LogViewer\Contracts\Utilities\LogStyler as LogStylerContract;
-use Naasson\LogViewer\LogViewer;
-use Naasson\LogViewer\Utilities;
-use Naasson\Support\Providers\ServiceProvider;
+use NaassonTeam\LogViewer\Contracts\LogViewer as LogViewerContract;
+use NaassonTeam\LogViewer\Contracts\Utilities\Factory as FactoryContract;
+use NaassonTeam\LogViewer\Contracts\Utilities\Filesystem as FilesystemContract;
+use NaassonTeam\LogViewer\Contracts\Utilities\LogChecker as LogCheckerContract;
+use NaassonTeam\LogViewer\Contracts\Utilities\LogLevels as LogLevelsContract;
+use NaassonTeam\LogViewer\Contracts\Utilities\LogMenu as LogMenuContract;
+use NaassonTeam\LogViewer\Contracts\Utilities\LogStyler as LogStylerContract;
+use NaassonTeam\LogViewer\LogViewer;
+use NaassonTeam\LogViewer\Utilities;
+use Arcanedev\Support\Providers\ServiceProvider;
 use Illuminate\Contracts\Support\DeferrableProvider;
 
 /**
  * Class     DeferredServicesProvider
  *
- * @package  Naasson\LogViewer\Providers
+ * @package  NaassonTeam\LogViewer\Providers
  * @author   NaassonTeam <info@naasson.com>
  */
 class DeferredServicesProvider extends ServiceProvider implements DeferrableProvider

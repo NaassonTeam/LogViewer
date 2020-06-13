@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Tests;
+namespace NaassonTeam\LogViewer\Tests;
 
 /**
  * Class     RoutesTest
  *
- * @package  Naasson\LogViewer\Tests
+ * @package  NaassonTeam\LogViewer\Tests
  * @author   NaassonTeam <info@naasson.com>
  *
  * @todo:    Find a way to test the route Classes with testbench (Find another tool if it's impossible).
@@ -225,7 +225,7 @@ class RoutesTest extends TestCase
     {
         $response = $this->delete(route('log-viewer::logs.delete'), ['date' => '0000-00-00'], ['HTTP_X-Requested-With' => 'XMLHttpRequest']);
 
-        static::assertInstanceOf(\Naasson\LogViewer\Exceptions\FilesystemException::class, $response->exception);
+        static::assertInstanceOf(\NaassonTeam\LogViewer\Exceptions\FilesystemException::class, $response->exception);
         static::assertStringStartsWith('The log(s) could not be located at : ', $response->exception->getMessage());
     }
 

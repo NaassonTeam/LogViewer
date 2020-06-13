@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Contracts\Utilities;
+namespace NaassonTeam\LogViewer\Contracts\Utilities;
 
-use Naasson\LogViewer\Contracts\Patternable;
+use NaassonTeam\LogViewer\Contracts\Patternable;
 
 /**
  * Interface  Filesystem
  *
- * @package   Naasson\LogViewer\Contracts\Utilities
+ * @package   NaassonTeam\LogViewer\Contracts\Utilities
  * @author    NaassonTeam <info@naasson.com>
  */
 interface Filesystem extends Patternable
@@ -106,7 +106,7 @@ interface Filesystem extends Patternable
      *
      * @return string
      *
-     * @throws \Naasson\LogViewer\Exceptions\FilesystemException
+     * @throws \NaassonTeam\LogViewer\Exceptions\FilesystemException
      */
     public function read($date);
 
@@ -117,7 +117,7 @@ interface Filesystem extends Patternable
      *
      * @return bool
      *
-     * @throws \Naasson\LogViewer\Exceptions\FilesystemException
+     * @throws \NaassonTeam\LogViewer\Exceptions\FilesystemException
      */
     public function delete($date);
 

@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Tests\Providers;
+namespace NaassonTeam\LogViewer\Tests\Providers;
 
-use Naasson\LogViewer\Contracts;
-use Naasson\LogViewer\Providers\DeferredServicesProvider;
-use Naasson\LogViewer\Tests\TestCase;
+use NaassonTeam\LogViewer\Contracts;
+use NaassonTeam\LogViewer\Providers\DeferredServicesProvider;
+use NaassonTeam\LogViewer\Tests\TestCase;
 
 /**
  * Class     DeferredServicesProviderTest
  *
- * @package  Naasson\LogViewer\Tests\Providers
+ * @package  NaassonTeam\LogViewer\Tests\Providers
  * @author   NaassonTeam <info@naasson.com>
  */
 class DeferredServicesProviderTest extends TestCase
@@ -21,7 +21,7 @@ class DeferredServicesProviderTest extends TestCase
      | -----------------------------------------------------------------
      */
 
-    /** @var  \Naasson\LogViewer\Providers\DeferredServicesProvider */
+    /** @var  \NaassonTeam\LogViewer\Providers\DeferredServicesProvider */
     private $provider;
 
     /* -----------------------------------------------------------------
@@ -55,7 +55,7 @@ class DeferredServicesProviderTest extends TestCase
         $expectations = [
             \Illuminate\Support\ServiceProvider::class,
             \Illuminate\Contracts\Support\DeferrableProvider::class,
-            \Naasson\Support\Providers\ServiceProvider::class,
+            \Arcanedev\Support\Providers\ServiceProvider::class,
             DeferredServicesProvider::class,
         ];
 

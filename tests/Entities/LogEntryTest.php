@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Tests\Entities;
+namespace NaassonTeam\LogViewer\Tests\Entities;
 
-use Naasson\LogViewer\Entities\LogEntry;
-use Naasson\LogViewer\Tests\TestCase;
+use NaassonTeam\LogViewer\Entities\LogEntry;
+use NaassonTeam\LogViewer\Tests\TestCase;
 
 /**
  * Class     LogEntryTest
  *
- * @package  Naasson\LogViewer\Tests\Entities
+ * @package  NaassonTeam\LogViewer\Tests\Entities
  * @author   NaassonTeam <info@naasson.com>
  */
 class LogEntryTest extends TestCase
@@ -20,7 +20,7 @@ class LogEntryTest extends TestCase
      | -----------------------------------------------------------------
      */
 
-    /** @var  \Naasson\LogViewer\Entities\LogEntry */
+    /** @var  \NaassonTeam\LogViewer\Entities\LogEntry */
     private $entry;
 
     /* -----------------------------------------------------------------

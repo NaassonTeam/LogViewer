@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Tests\Entities;
+namespace NaassonTeam\LogViewer\Tests\Entities;
 
-use Naasson\LogViewer\Entities\LogCollection;
-use Naasson\LogViewer\Exceptions\LogNotFoundException;
-use Naasson\LogViewer\Tests\TestCase;
+use NaassonTeam\LogViewer\Entities\LogCollection;
+use NaassonTeam\LogViewer\Exceptions\LogNotFoundException;
+use NaassonTeam\LogViewer\Tests\TestCase;
 
 /**
  * Class     LogCollectionTest
  *
- * @package  Naasson\LogViewer\Tests\Entities
+ * @package  NaassonTeam\LogViewer\Tests\Entities
  * @author   NaassonTeam <info@naasson.com>
  */
 class LogCollectionTest extends TestCase
@@ -21,7 +21,7 @@ class LogCollectionTest extends TestCase
      | -----------------------------------------------------------------
      */
 
-    /** @var  \Naasson\LogViewer\Entities\LogCollection */
+    /** @var  \NaassonTeam\LogViewer\Entities\LogCollection */
     private $logs;
 
     /* -----------------------------------------------------------------
@@ -62,7 +62,7 @@ class LogCollectionTest extends TestCase
         static::assertSame(16, $this->logs->total());
 
         foreach ($this->logs as $date => $log) {
-            /** @var  \Naasson\LogViewer\Entities\Log  $log */
+            /** @var  \NaassonTeam\LogViewer\Entities\Log  $log */
             static::assertLog($log, $date);
             static::assertCount(8,  $log->entries());
             static::assertSame(8, $log->entries()->count());

@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Commands;
+namespace NaassonTeam\LogViewer\Commands;
 
-use Naasson\LogViewer\Contracts\Utilities\LogChecker as LogCheckerContract;
+use NaassonTeam\LogViewer\Contracts\Utilities\LogChecker as LogCheckerContract;
 
 /**
  * Class     PublishCommand
  *
- * @package  Naasson\LogViewer\Commands
+ * @package  NaassonTeam\LogViewer\Commands
  * @author   NaassonTeam <info@naasson.com>
  */
 class CheckCommand extends Command
@@ -48,7 +48,7 @@ class CheckCommand extends Command
     /**
      * Get the Log Checker instance.
      *
-     * @return \Naasson\LogViewer\Contracts\Utilities\LogChecker
+     * @return \NaassonTeam\LogViewer\Contracts\Utilities\LogChecker
      */
     protected function getChecker()
     {
