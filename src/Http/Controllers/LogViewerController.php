@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\{Arr, Collection, Str};
+use NaassonTeam\LogViewer\Contracts\Utilities\Filesystem as FilesystemContract;
 
 /**
  * Class     LogViewerController
@@ -337,8 +338,8 @@ class LogViewerController extends Controller
     {
         $this->logViewer->setPattern(
             $type . "-laravel-",
-            Filesystem::PATTERN_DATE,
-            Filesystem::PATTERN_EXTENSION
+            FilesystemContract::PATTERN_DATE,
+            FilesystemContract::PATTERN_EXTENSION
         );
     }
 }
