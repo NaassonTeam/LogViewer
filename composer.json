@@ -1,7 +1,7 @@
 {
-    "name":        "web24pw/log-viewer",
+    "name":        "naassonteam/log-viewer",
     "description": "Provides a Log Viewer for Laravel 7",
-    "keywords":    ["web24pw", "laravel", "log", "log viewer", "log-viewer", "logviewer"],
+    "keywords":    ["naassonteam", "laravel", "log", "log viewer", "log-viewer", "logviewer"],
     "homepage":    "https://github.com/web24pw/log-viewer",
     "authors": [
         {
