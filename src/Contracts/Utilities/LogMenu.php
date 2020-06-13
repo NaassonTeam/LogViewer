@@ -51,5 +51,5 @@ interface LogMenu
      *
      * @return array
      */
-    public function make(Log $log, $trans = true);
+    public function make(Log $log, $trans = true, $type);
 }

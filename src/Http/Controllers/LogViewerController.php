@@ -118,7 +118,7 @@ class LogViewerController extends Controller
         $entries = $log->entries($level)->paginate($this->perPage);
 
         //dd($log);
-        dd($log->menu($type));
+        //dd($log->menu($type));
 
 
         return $this->view('show', compact('level', 'log', 'query', 'levels', 'entries', 'type'));
@@ -234,12 +234,12 @@ class LogViewerController extends Controller
     {
         $theme = config('log-viewer.theme');
 
-        dd(
-            $view,
-            $data,
-            $data['log'],
-            $mergeData
-        );
+        //dd(
+        //    $view,
+        //    $data,
+        //    //$data['log'],
+        //    $mergeData
+        //);
 
         return view()->make("log-viewer::{$theme}.{$view}", $data, $mergeData);
     }

@@ -38,24 +38,22 @@ $jsonViewContext = '';
       <div class="card mb-4">
         <div class="card-header"><i class="fa fa-fw fa-flag"></i> Levels</div>
         <div class="list-group list-group-flush log-menu">
-          @if (!empty($log->menu))
 
-            @foreach($log->menu() as $levelKey => $item)
-              @if ($item['count'] === 0)
-                <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center disabled">
-                  <span class="level-name">{!! $item['icon'] !!} {{ $item['name'] }}</span>
-                  <span class="badge empty">{{ $item['count'] }}</span>
-                </a>
-              @else
-                <a href="{{ $item['url'] }}"
-                   class="list-group-item list-group-item-action d-flex justify-content-between align-items-center level-{{ $levelKey }}{{ $level === $levelKey ? ' active' : ''}}">
-                  <span class="level-name">{!! $item['icon'] !!} {{ $item['name'] }}</span>
-                  <span class="badge badge-level-{{ $levelKey }}">{{ $item['count'] }}</span>
-                </a>
-              @endif
-            @endforeach
+          @foreach($log->menu($type) as $levelKey => $item)
+            @if ($item['count'] === 0)
+              <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center disabled">
+                <span class="level-name">{!! $item['icon'] !!} {{ $item['name'] }}</span>
+                <span class="badge empty">{{ $item['count'] }}</span>
+              </a>
+            @else
+              <a href="{{ $item['url'] }}"
+                 class="list-group-item list-group-item-action d-flex justify-content-between align-items-center level-{{ $levelKey }}{{ $level === $levelKey ? ' active' : ''}}">
+                <span class="level-name">{!! $item['icon'] !!} {{ $item['name'] }}</span>
+                <span class="badge badge-level-{{ $levelKey }}">{{ $item['count'] }}</span>
+              </a>
+            @endif
+          @endforeach
 
-          @endif
         </div>
       </div>
     </div>
@@ -76,28 +74,28 @@ $jsonViewContext = '';
         <div class="table-responsive">
           <table class="table table-condensed mb-0">
             <tbody>
-                            <tr>
-                                <td>File path :</td>
-                                <td colspan="7">{{ $log->getPath() }}</td>
-                            </tr>
-                            <tr>
-                                <td>Log entries :</td>
-                                <td>
-                                    <span class="badge badge-primary">{{ $entries->total() }}</span>
-                                </td>
-                                <td>Size :</td>
-                                <td>
-                                    <span class="badge badge-primary">{{ $log->size() }}</span>
-                                </td>
-                                <td>Created at :</td>
-                                <td>
-                                    <span class="badge badge-primary">{{ $log->createdAt() }}</span>
-                                </td>
-                              <td>Updated at :</td>
-                              <td>
-                                <span class="badge badge-primary">{{ $log->updatedAt() }}</span>
-                              </td>
-                            </tr>
+            <tr>
+              <td>File path :</td>
+              <td colspan="7">{{ $log->getPath() }}</td>
+            </tr>
+            <tr>
+              <td>Log entries :</td>
+              <td>
+                <span class="badge badge-primary">{{ $entries->total() }}</span>
+              </td>
+              <td>Size :</td>
+              <td>
+                <span class="badge badge-primary">{{ $log->size() }}</span>
+              </td>
+              <td>Created at :</td>
+              <td>
+                <span class="badge badge-primary">{{ $log->createdAt() }}</span>
+              </td>
+              <td>Updated at :</td>
+              <td>
+                <span class="badge badge-primary">{{ $log->updatedAt() }}</span>
+              </td>
+            </tr>
             </tbody>
           </table>
         </div>
@@ -121,118 +119,118 @@ $jsonViewContext = '';
               </div>
             </div>
           </form>
-                </div>
-            </div>
+        </div>
+      </div>
 
-            {{-- Log Entries --}}
-            <div class="card mb-4">
-                @if ($entries->hasPages())
-                    <div class="card-header">
+      {{-- Log Entries --}}
+      <div class="card mb-4">
+        @if ($entries->hasPages())
+          <div class="card-header">
                         <span class="badge badge-info float-rigLevelsht">
                             Page {{ $entries->currentPage() }} of {{ $entries->lastPage() }}
                         </span>
-                    </div>
-                @endif
+          </div>
+        @endif
 
-                <div class="table-responsive">
-                    <table id="entries" class="table mb-0">
-                        <thead>
-                            <tr>
-                                <th>ENV</th>
-                                <th style="width: 120px;">Level</th>
-                                <th style="width: 65px;">Time</th>
-                                <th>Header</th>
-                                <th class="text-right">Actions</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            @forelse($entries as $key => $entry)
-                                <?php /** @var  NaassonTeam\LogViewer\Entities\LogEntry  $entry */ ?>
-                                <tr>
-                                    <td>
-                                        <span class="badge badge-env">{{ $entry->env }}</span>
-                                    </td>
-                                    <td>
+        <div class="table-responsive">
+          <table id="entries" class="table mb-0">
+            <thead>
+            <tr>
+              <th>ENV</th>
+              <th style="width: 120px;">Level</th>
+              <th style="width: 65px;">Time</th>
+              <th>Header</th>
+              <th class="text-right">Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            @forelse($entries as $key => $entry)
+                <?php /** @var  NaassonTeam\LogViewer\Entities\LogEntry  $entry */ ?>
+                <tr>
+                  <td>
+                    <span class="badge badge-env">{{ $entry->env }}</span>
+                  </td>
+                  <td>
                                         <span class="badge badge-level-{{ $entry->level }}">
                                             {!! $entry->level() !!}
                                         </span>
-                                    </td>
-                                    <td>
+                  </td>
+                  <td>
                                         <span class="badge badge-secondary">
                                             {{ $entry->datetime->format('H:i:s') }}
                                         </span>
-                                    </td>
-                                    <td>
-                                        {{ $entry->header }}
-                                    </td>
-                                    <td class="text-right">
-                                        @if ($entry->hasStack())
-                                        <a class="btn btn-sm btn-light" role="button" data-toggle="collapse"
-                                           href="#log-stack-{{ $key }}" aria-expanded="false" aria-controls="log-stack-{{ $key }}">
-                                            <i class="fa fa-toggle-on"></i> Stack
-                                        </a>
-                                        @endif
+                  </td>
+                  <td>
+                    {{ $entry->header }}
+                  </td>
+                  <td class="text-right">
+                    @if ($entry->hasStack())
+                      <a class="btn btn-sm btn-light" role="button" data-toggle="collapse"
+                         href="#log-stack-{{ $key }}" aria-expanded="false" aria-controls="log-stack-{{ $key }}">
+                        <i class="fa fa-toggle-on"></i> Stack
+                      </a>
+                    @endif
 
-                                        @if ($entry->hasContext())
-                                        <a class="btn btn-sm btn-light" role="button" data-toggle="collapse"
-                                           href="#log-context-{{ $key }}" aria-expanded="false" aria-controls="log-context-{{ $key }}">
-                                            <i class="fa fa-toggle-on"></i> Context
-                                        </a>
-                                        @endif
-                                    </td>
-                                </tr>
-                                @if ($entry->hasStack() || $entry->hasContext())
-                                  <tr>
-                                    <td colspan="5" class="stack py-0">
-                                      @if ($entry->hasStack())
-                                        <div class="stack-content collapse" id="log-stack-{{ $key }}">
-                                          {!! $entry->stack() !!}
-                                        </div>
-                                      @endif
+                    @if ($entry->hasContext())
+                      <a class="btn btn-sm btn-light" role="button" data-toggle="collapse"
+                         href="#log-context-{{ $key }}" aria-expanded="false" aria-controls="log-context-{{ $key }}">
+                        <i class="fa fa-toggle-on"></i> Context
+                      </a>
+                    @endif
+                  </td>
+                </tr>
+                @if ($entry->hasStack() || $entry->hasContext())
+                  <tr>
+                    <td colspan="5" class="stack py-0">
+                      @if ($entry->hasStack())
+                        <div class="stack-content collapse" id="log-stack-{{ $key }}">
+                          {!! $entry->stack() !!}
+                        </div>
+                      @endif
 
-                                      @if ($entry->hasContext())
-                                        <div class="stack-content collapse" id="log-context-{{ $key }}">
+                      @if ($entry->hasContext())
+                        <div class="stack-content collapse" id="log-context-{{ $key }}">
 
-                                          <div class="json_{{ $key }}"></div>
+                          <div class="json_{{ $key }}"></div>
 
-                                          <?php
-                                            try {
-                                              $jsonObj  = json_decode($entry->context(), true);
+                            <?php
+                            try {
+                                $jsonObj  = json_decode($entry->context(), true);
 
-                                              if (is_null($jsonObj)) {
-                                                throw ('Error');
-                                              }
+                                if (is_null($jsonObj)) {
+                                    throw ('Error');
+                                }
 
-                                              $jsonViewContext .= '
+                                $jsonViewContext .= '
                                               var jsonViewer = new JSONViewer();
                                               document.querySelector(".json_' . $key . '").appendChild(jsonViewer.getContainer());
                                               jsonViewer.showJSON(JSON.parse(cleanJson(\'' . json_encode($jsonObj) . '\')));
                                               ';
 
 
-                                            } catch (Exception $e) {
-                                                echo '<pre>' . $entry->context(). '</pre>';
-                                            }
+                            } catch (Exception $e) {
+                                echo '<pre>' . $entry->context(). '</pre>';
+                            }
 
-                                          ?>
+                            ?>
 
 
-                                        </div>
-                                      @endif
-                                    </td>
-                                  </tr>
-                                @endif
-                            @empty
-                              <tr>
-                                <td colspan="5" class="text-center">
-                                  <span class="badge badge-secondary">{{ trans('log-viewer::general.empty-logs') }}</span>
-                                    </td>
-                                </tr>
-                            @endforelse
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+                        </div>
+                      @endif
+                    </td>
+                  </tr>
+                @endif
+            @empty
+              <tr>
+                <td colspan="5" class="text-center">
+                  <span class="badge badge-secondary">{{ trans('log-viewer::general.empty-logs') }}</span>
+                </td>
+              </tr>
+            @endforelse
+            </tbody>
+          </table>
+        </div>
+      </div>
 
       {!! $entries->appends(compact('query'))->render() !!}
     </div>
@@ -254,74 +252,74 @@ $jsonViewContext = '';
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-                    <div class="modal-body">
-                        <p>Are you sure you want to <span class="badge badge-danger">DELETE</span> this log file <span class="badge badge-primary">{{ $log->date }}</span> ?</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-sm btn-secondary mr-auto" data-dismiss="modal">Cancel</button>
-                        <button type="submit" class="btn btn-sm btn-danger" data-loading-text="Loading&hellip;">DELETE FILE</button>
-                    </div>
-                </div>
-            </form>
+          <div class="modal-body">
+            <p>Are you sure you want to <span class="badge badge-danger">DELETE</span> this log file <span class="badge badge-primary">{{ $log->date }}</span> ?</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-sm btn-secondary mr-auto" data-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-sm btn-danger" data-loading-text="Loading&hellip;">DELETE FILE</button>
+          </div>
         </div>
+      </form>
     </div>
+  </div>
 @endsection
 
 @section('scripts')
-    <script>
-        $(function () {
+  <script>
+	$(function () {
 
-                  @php
-                    echo $jsonViewContext;
-                  @endphp
+            @php
+              echo $jsonViewContext;
+            @endphp
 
 
-            var deleteLogModal = $('div#delete-log-modal'),
-                deleteLogForm  = $('form#delete-log-form'),
-                submitBtn      = deleteLogForm.find('button[type=submit]');
+		var deleteLogModal = $('div#delete-log-modal'),
+			deleteLogForm  = $('form#delete-log-form'),
+			submitBtn      = deleteLogForm.find('button[type=submit]');
 
-            deleteLogForm.on('submit', function(event) {
-                event.preventDefault();
-                submitBtn.button('loading');
-	            $.ajax({
-		            url: $(this).attr('action'),
-		            type: $(this).attr('method'),
-		            dataType: 'json',
-		            data: $(this).serialize(),
-		            success: function (data) {
-			            submitBtn.button('reset')
-			            if (data.result === 'success') {
-				            deleteLogModal.modal('hide')
-				            location.replace("{{ route('log-viewer::logs.list', [$type]) }}")
-			            } else {
-				            alert('OOPS ! This is a lack of coffee exception !')
-			            }
-		            },
-		            error: function (xhr, textStatus, errorThrown) {
-			            alert('AJAX ERROR ! Check the console !')
-			            console.error(errorThrown)
-			            submitBtn.button('reset')
-		            }
-                });
+		deleteLogForm.on('submit', function(event) {
+			event.preventDefault();
+			submitBtn.button('loading');
+			$.ajax({
+				url: $(this).attr('action'),
+				type: $(this).attr('method'),
+				dataType: 'json',
+				data: $(this).serialize(),
+				success: function (data) {
+					submitBtn.button('reset')
+					if (data.result === 'success') {
+						deleteLogModal.modal('hide')
+						location.replace("{{ route('log-viewer::logs.list', [$type]) }}")
+					} else {
+						alert('OOPS ! This is a lack of coffee exception !')
+					}
+				},
+				error: function (xhr, textStatus, errorThrown) {
+					alert('AJAX ERROR ! Check the console !')
+					console.error(errorThrown)
+					submitBtn.button('reset')
+				}
+			});
 
-                return false;
-            });
+			return false;
+		});
 
-            @unless (empty(log_styler()->toHighlight()))
-                @php
-                    $htmlHighlight = version_compare(PHP_VERSION, '7.4.0') >= 0
-                        ? join('|', log_styler()->toHighlight())
-                        : join(log_styler()->toHighlight(), '|');
-                @endphp
+    @unless (empty(log_styler()->toHighlight()))
+    @php
+      $htmlHighlight = version_compare(PHP_VERSION, '7.4.0') >= 0
+          ? join('|', log_styler()->toHighlight())
+          : join(log_styler()->toHighlight(), '|');
+    @endphp
 
-                $('.stack-content').each(function() {
-                    var $this = $(this);
-                    var html = $this.html().trim()
-                        .replace(/({!! $htmlHighlight !!})/gm, '<strong>$1</strong>');
+		$('.stack-content').each(function() {
+			var $this = $(this);
+			var html = $this.html().trim()
+				.replace(/({!! $htmlHighlight !!})/gm, '<strong>$1</strong>');
 
-                    $this.html(html);
-                });
-          @endunless
-        });
-    </script>
+			$this.html(html);
+		});
+    @endunless
+	});
+  </script>
 @endsection

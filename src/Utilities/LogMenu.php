@@ -99,14 +99,14 @@ class LogMenu implements LogMenuContract
      *
      * @return array
      */
-    public function make(Log $log, $trans = true)
+    public function make(Log $log, $trans = true, $type)
     {
         $items = [];
         $route = $this->config('menu.filter-route');
 
         foreach($log->tree($trans) as $level => $item) {
             $items[$level] = array_merge($item, [
-                'url'  => route($route, [$log->date, $level]),
+                'url'  => route($route, [$type, $log->date, $level]),
                 'icon' => $this->isIconsEnabled() ? $this->styler->icon($level)->toHtml() : '',
             ]);
         }
