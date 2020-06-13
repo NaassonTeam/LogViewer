@@ -245,6 +245,7 @@ $jsonViewContext = '';
         <input type="hidden" name="_method" value="DELETE">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
         <input type="hidden" name="date" value="{{ $log->date }}">
+        <input type="hidden" name="type" value="{{ $type }}">
         <div class="modal-content">
           <div class="modal-header">
             <h5 class="modal-title">DELETE LOG FILE</h5>
@@ -269,10 +270,9 @@ $jsonViewContext = '';
   <script>
 	$(function () {
 
-            @php
-              echo $jsonViewContext;
-            @endphp
-
+    @php
+      echo $jsonViewContext;
+    @endphp
 
 		var deleteLogModal = $('div#delete-log-modal'),
 			deleteLogForm  = $('form#delete-log-form'),

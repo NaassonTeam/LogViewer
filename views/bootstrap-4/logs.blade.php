@@ -74,7 +74,8 @@
             <form id="delete-log-form" action="{{ route('log-viewer::logs.delete', [$type]) }}" method="POST">
                 <input type="hidden" name="_method" value="DELETE">
                 <input type="hidden" name="_token" value="{{ csrf_token() }}">
-                <input type="hidden" name="date" value="">
+              <input type="hidden" name="type" value="{{ $type }}">
+              <input type="hidden" name="date" value="">
                 <div class="modal-content">
                     <div class="modal-header">
                         <h5 class="modal-title">DELETE LOG FILE</h5>
