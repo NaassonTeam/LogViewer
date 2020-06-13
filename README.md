@@ -85,17 +85,17 @@ If you discover any security related issues, please email info@naasson.com inste
 [badge_laravel]:      https://img.shields.io/badge/Laravel-5.x|6.x|7.x-orange.svg?style=flat-square
 [badge_license]:      https://img.shields.io/packagist/l/arcanedev/log-viewer.svg?style=flat-square
 [badge_build]:        https://img.shields.io/github/workflow/status/NaassonTeam/LogViewer/run-tests?style=flat-square
-[badge_coverage]:     https://img.shields.io/scrutinizer/coverage/g/ARCANEDEV/LogViewer.svg?style=flat-square
-[badge_quality]:      https://img.shields.io/scrutinizer/g/ARCANEDEV/LogViewer.svg?style=flat-square
+[badge_coverage]:     https://img.shields.io/scrutinizer/coverage/g/NaassonTeam/LogViewer.svg?style=flat-square
+[badge_quality]:      https://img.shields.io/scrutinizer/g/NaassonTeam/LogViewer.svg?style=flat-square
 [badge_insight]:      https://img.shields.io/sensiolabs/i/d6b4587a-e00d-4dac-98db-f979731fdc4d.svg?style=flat-square
-[badge_issues]:       https://img.shields.io/github/issues/ARCANEDEV/LogViewer.svg?style=flat-square
+[badge_issues]:       https://img.shields.io/github/issues/NaassonTeam/LogViewer.svg?style=flat-square
 [badge_package]:      https://img.shields.io/badge/package-arcanedev/log--viewer-blue.svg?style=flat-square
 [badge_release]:      https://img.shields.io/packagist/v/arcanedev/log-viewer.svg?style=flat-square
 [badge_downloads]:    https://img.shields.io/packagist/dt/arcanedev/log-viewer.svg?style=flat-square
 
 [link-author]:        https://github.com/arcanedev-maroc
 [link-github-status]: https://github.com/NaassonTeam/LogViewer/actions
-[link-github-repo]:   https://github.com/ARCANEDEV/LogViewer
+[link-github-repo]:   https://github.com/NaassonTeam/LogViewer
 [link-github-issues]: https://github.com/NaassonTeam/LogViewer/issues
 [link-contributors]:  https://github.com/NaassonTeam/LogViewer/graphs/contributors
 [link-packagist]:     https://packagist.org/packages/arcanedev/log-viewer

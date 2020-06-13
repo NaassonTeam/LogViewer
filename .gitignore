@@ -5,6 +5,5 @@
 /phpunit.xml
 .DS_Store
 Thumbs.db
-
 .idea
 package-lock.json
