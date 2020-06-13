@@ -271,7 +271,7 @@ class LogViewerController extends Controller
      *
      * @param string $date
      *
-     * @return \Arcanedev\LogViewer\Entities\Log|null
+     * @return \NaassonTeam\LogViewer\Entities\Log|null
      */
     protected function getLogOrFail($date)
     {
@@ -289,7 +289,7 @@ class LogViewerController extends Controller
     /**
      * Prepare chart data.
      *
-     * @param \Arcanedev\LogViewer\Tables\StatsTable $stats
+     * @param \NaassonTeam\LogViewer\Tables\StatsTable $stats
      *
      * @return string
      */

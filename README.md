@@ -1,15 +1,5 @@
 # LogViewer [![Packagist License][badge_license]](LICENSE.md) [![For Laravel][badge_laravel]][link-github-repo]
 
-[![Github Workflow Status][badge_build]][link-github-status]
-[![Coverage Status][badge_coverage]][link-scrutinizer]
-[![Scrutinizer Code Quality][badge_quality]][link-scrutinizer]
-[![SensioLabs Insight][badge_insight]][link-insight]
-[![Github Issues][badge_issues]][link-github-issues]
-
-[![Packagist][badge_package]][link-packagist]
-[![Packagist Release][badge_release]][link-packagist]
-[![Packagist Downloads][badge_downloads]][link-packagist]
-
 This package allows you to manage and keep track of each one of your log files.
 
  > **NOTE: You can also use LogViewer as an API.**

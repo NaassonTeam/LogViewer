@@ -1,6 +1,6 @@
 <?php
 /**
- * @var  Arcanedev\LogViewer\Entities\Log $log
+ * @var  NaassonTeam\LogViewer\Entities\Log $log
  * @var  Illuminate\Pagination\LengthAwarePaginator $entries
  * @var  string|null $query
  */
@@ -147,7 +147,7 @@ $jsonViewContext = '';
                         </thead>
                         <tbody>
                             @forelse($entries as $key => $entry)
-                                <?php /** @var  Arcanedev\LogViewer\Entities\LogEntry  $entry */ ?>
+                                <?php /** @var  NaassonTeam\LogViewer\Entities\LogEntry  $entry */ ?>
                                 <tr>
                                     <td>
                                         <span class="badge badge-env">{{ $entry->env }}</span>

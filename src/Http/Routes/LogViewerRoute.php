@@ -27,7 +27,7 @@ class LogViewerRoute extends RouteRegistrar
     public function map(): void
     {
         $attributes = array_merge(config('log-viewer.route.attributes', []), [
-            'namespace' => 'Arcanedev\\LogViewer\\Http\\Controllers',
+            'namespace' => 'NaassonTeam\\LogViewer\\Http\\Controllers',
         ]);
 
         $this->group($attributes, function() {
