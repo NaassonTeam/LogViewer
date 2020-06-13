@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Tests\Utilities;
+namespace NaassonTeam\LogViewer\Tests\Utilities;
 
-use Naasson\LogViewer\Tests\TestCase;
-use Naasson\LogViewer\Utilities\Factory;
+use NaassonTeam\LogViewer\Tests\TestCase;
+use NaassonTeam\LogViewer\Utilities\Factory;
 
 /**
  * Class     FactoryTest
  *
- * @package  Naasson\LogViewer\Tests\Utilities
+ * @package  NaassonTeam\LogViewer\Tests\Utilities
  * @author   NaassonTeam <info@naasson.com>
  */
 class FactoryTest extends TestCase
@@ -20,7 +20,7 @@ class FactoryTest extends TestCase
      | -----------------------------------------------------------------
      */
 
-    /** @var  \Naasson\LogViewer\Contracts\Utilities\Factory */
+    /** @var  \NaassonTeam\LogViewer\Contracts\Utilities\Factory */
     private $logFactory;
 
     /* -----------------------------------------------------------------
@@ -32,7 +32,7 @@ class FactoryTest extends TestCase
     {
         parent::setUp();
 
-        $this->logFactory = $this->app->make(\Naasson\LogViewer\Contracts\Utilities\Factory::class);
+        $this->logFactory = $this->app->make(\NaassonTeam\LogViewer\Contracts\Utilities\Factory::class);
     }
 
     protected function tearDown(): void
@@ -57,8 +57,8 @@ class FactoryTest extends TestCase
     public function it_can_get_filesystem_object(): void
     {
         $expectations = [
-            \Naasson\LogViewer\Contracts\Utilities\Filesystem::class,
-            \Naasson\LogViewer\Utilities\Filesystem::class,
+            \NaassonTeam\LogViewer\Contracts\Utilities\Filesystem::class,
+            \NaassonTeam\LogViewer\Utilities\Filesystem::class,
         ];
 
         foreach ($expectations as $expected) {
@@ -70,8 +70,8 @@ class FactoryTest extends TestCase
     public function it_can_get_levels_object(): void
     {
         $expectations = [
-            \Naasson\LogViewer\Contracts\Utilities\LogLevels::class,
-            \Naasson\LogViewer\Utilities\LogLevels::class,
+            \NaassonTeam\LogViewer\Contracts\Utilities\LogLevels::class,
+            \NaassonTeam\LogViewer\Utilities\LogLevels::class,
         ];
 
         foreach ($expectations as $expected) {
@@ -103,7 +103,7 @@ class FactoryTest extends TestCase
     {
         $logs = $this->logFactory->all();
 
-        static::assertInstanceOf(\Naasson\LogViewer\Entities\LogCollection::class, $logs);
+        static::assertInstanceOf(\NaassonTeam\LogViewer\Entities\LogCollection::class, $logs);
         static::assertCount(2, $logs);
         static::assertSame(2, $logs->count());
     }
@@ -232,7 +232,7 @@ class FactoryTest extends TestCase
     /** @test */
     public function it_must_throw_a_filesystem_exception(): void
     {
-        $this->expectException(\Naasson\LogViewer\Exceptions\LogNotFoundException::class);
+        $this->expectException(\NaassonTeam\LogViewer\Exceptions\LogNotFoundException::class);
 
         $this->logFactory->get('2222-11-11'); // Future FTW
     }

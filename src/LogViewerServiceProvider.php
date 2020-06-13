@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer;
+namespace NaassonTeam\LogViewer;
 
-use Naasson\Support\Providers\PackageServiceProvider;
+use NaassonTeam\Support\Providers\PackageServiceProvider;
 
 /**
  * Class     LogViewerServiceProvider
  *
- * @package  Naasson\LogViewer
+ * @package  NaassonTeam\LogViewer
  * @author   NaassonTeam <info@naasson.com>
  */
 class LogViewerServiceProvider extends PackageServiceProvider

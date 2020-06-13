@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Utilities;
+namespace NaassonTeam\LogViewer\Utilities;
 
-use Naasson\LogViewer\Contracts\Utilities\LogLevels as LogLevelsContract;
+use NaassonTeam\LogViewer\Contracts\Utilities\LogLevels as LogLevelsContract;
 use Illuminate\Support\Arr;
 use Illuminate\Translation\Translator;
 use Psr\Log\LogLevel;
@@ -13,7 +13,7 @@ use ReflectionClass;
 /**
  * Class     LogLevels
  *
- * @package  Naasson\LogViewer\Utilities
+ * @package  NaassonTeam\LogViewer\Utilities
  * @author   NaassonTeam <info@naasson.com>
  */
 class LogLevels implements LogLevelsContract

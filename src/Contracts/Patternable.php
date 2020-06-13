@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Contracts;
+namespace NaassonTeam\LogViewer\Contracts;
 
-use Naasson\LogViewer\Contracts\Utilities\Filesystem;
+use NaassonTeam\LogViewer\Contracts\Utilities\Filesystem;
 
 /**
  * Interface  Patternable
  *
- * @package   Naasson\LogViewer\Contracts
+ * @package   NaassonTeam\LogViewer\Contracts
  * @author    NaassonTeam <info@naasson.com>
  */
 interface Patternable

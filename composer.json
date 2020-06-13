@@ -25,20 +25,20 @@
     },
     "autoload": {
         "psr-4": {
-            "Naasson\\LogViewer\\": "src/"
+            "NaassonTeam\\LogViewer\\": "src/"
         },
         "files": ["helpers.php"]
     },
     "autoload-dev": {
         "psr-4": {
-            "Naasson\\LogViewer\\Tests\\": "tests/"
+            "NaassonTeam\\LogViewer\\Tests\\": "tests/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Naasson\\LogViewer\\LogViewerServiceProvider",
-                "Naasson\\LogViewer\\Providers\\DeferredServicesProvider"
+                "NaassonTeam\\LogViewer\\LogViewerServiceProvider",
+                "NaassonTeam\\LogViewer\\Providers\\DeferredServicesProvider"
             ]
         }
     },

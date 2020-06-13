@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Utilities;
+namespace NaassonTeam\LogViewer\Utilities;
 
-use Naasson\LogViewer\Contracts\Utilities\Factory as FactoryContract;
-use Naasson\LogViewer\Contracts\Utilities\Filesystem as FilesystemContract;
-use Naasson\LogViewer\Contracts\Utilities\LogLevels as LogLevelsContract;
-use Naasson\LogViewer\Entities\LogCollection;
-use Naasson\LogViewer\Tables\StatsTable;
+use NaassonTeam\LogViewer\Contracts\Utilities\Factory as FactoryContract;
+use NaassonTeam\LogViewer\Contracts\Utilities\Filesystem as FilesystemContract;
+use NaassonTeam\LogViewer\Contracts\Utilities\LogLevels as LogLevelsContract;
+use NaassonTeam\LogViewer\Entities\LogCollection;
+use NaassonTeam\LogViewer\Tables\StatsTable;
 
 /**
  * Class     Factory
  *
- * @package  Naasson\LogViewer\Utilities
+ * @package  NaassonTeam\LogViewer\Utilities
  * @author   NaassonTeam <info@naasson.com>
  */
 class Factory implements FactoryContract
@@ -26,14 +26,14 @@ class Factory implements FactoryContract
     /**
      * The filesystem instance.
      *
-     * @var \Naasson\LogViewer\Contracts\Utilities\Filesystem
+     * @var \NaassonTeam\LogViewer\Contracts\Utilities\Filesystem
      */
     protected $filesystem;
 
     /**
      * The log levels instance.
      *
-     * @var \Naasson\LogViewer\Contracts\Utilities\LogLevels
+     * @var \NaassonTeam\LogViewer\Contracts\Utilities\LogLevels
      */
     private $levels;
 
@@ -45,8 +45,8 @@ class Factory implements FactoryContract
     /**
      * Create a new instance.
      *
-     * @param  \Naasson\LogViewer\Contracts\Utilities\Filesystem  $filesystem
-     * @param  \Naasson\LogViewer\Contracts\Utilities\LogLevels   $levels
+     * @param  \NaassonTeam\LogViewer\Contracts\Utilities\Filesystem  $filesystem
+     * @param  \NaassonTeam\LogViewer\Contracts\Utilities\LogLevels   $levels
      */
     public function __construct(FilesystemContract $filesystem, LogLevelsContract $levels) {
         $this->setFilesystem($filesystem);
@@ -61,7 +61,7 @@ class Factory implements FactoryContract
     /**
      * Get the filesystem instance.
      *
-     * @return \Naasson\LogViewer\Contracts\Utilities\Filesystem
+     * @return \NaassonTeam\LogViewer\Contracts\Utilities\Filesystem
      */
     public function getFilesystem()
     {
@@ -71,7 +71,7 @@ class Factory implements FactoryContract
     /**
      * Set the filesystem instance.
      *
-     * @param  \Naasson\LogViewer\Contracts\Utilities\Filesystem  $filesystem
+     * @param  \NaassonTeam\LogViewer\Contracts\Utilities\Filesystem  $filesystem
      *
      * @return self
      */
@@ -85,7 +85,7 @@ class Factory implements FactoryContract
     /**
      * Get the log levels instance.
      *
-     * @return \Naasson\LogViewer\Contracts\Utilities\LogLevels
+     * @return \NaassonTeam\LogViewer\Contracts\Utilities\LogLevels
      */
     public function getLevels()
     {
@@ -95,7 +95,7 @@ class Factory implements FactoryContract
     /**
      * Set the log levels instance.
      *
-     * @param  \Naasson\LogViewer\Contracts\Utilities\LogLevels  $levels
+     * @param  \NaassonTeam\LogViewer\Contracts\Utilities\LogLevels  $levels
      *
      * @return self
      */
@@ -152,7 +152,7 @@ class Factory implements FactoryContract
     /**
      * Get all logs.
      *
-     * @return \Naasson\LogViewer\Entities\LogCollection
+     * @return \NaassonTeam\LogViewer\Entities\LogCollection
      */
     public function logs()
     {
@@ -169,7 +169,7 @@ class Factory implements FactoryContract
      *
      * @see logs
      *
-     * @return \Naasson\LogViewer\Entities\LogCollection
+     * @return \NaassonTeam\LogViewer\Entities\LogCollection
      */
     public function all()
     {
@@ -193,7 +193,7 @@ class Factory implements FactoryContract
      *
      * @param  string  $date
      *
-     * @return \Naasson\LogViewer\Entities\Log
+     * @return \NaassonTeam\LogViewer\Entities\Log
      */
     public function log($date)
     {
@@ -205,7 +205,7 @@ class Factory implements FactoryContract
      *
      * @param  string  $date
      *
-     * @return \Naasson\LogViewer\Entities\Log
+     * @return \NaassonTeam\LogViewer\Entities\Log
      */
     public function get($date)
     {
@@ -218,7 +218,7 @@ class Factory implements FactoryContract
      * @param  string  $date
      * @param  string  $level
      *
-     * @return \Naasson\LogViewer\Entities\LogEntryCollection
+     * @return \NaassonTeam\LogViewer\Entities\LogEntryCollection
      */
     public function entries($date, $level = 'all')
     {
@@ -240,7 +240,7 @@ class Factory implements FactoryContract
      *
      * @param  string|null  $locale
      *
-     * @return \Naasson\LogViewer\Tables\StatsTable
+     * @return \NaassonTeam\LogViewer\Tables\StatsTable
      */
     public function statsTable($locale = null)
     {

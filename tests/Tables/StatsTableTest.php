@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Tests\Tables;
+namespace NaassonTeam\LogViewer\Tests\Tables;
 
-use Naasson\LogViewer\Contracts\Table as TableContract;
-use Naasson\LogViewer\Tables\StatsTable;
-use Naasson\LogViewer\Tests\TestCase;
+use NaassonTeam\LogViewer\Contracts\Table as TableContract;
+use NaassonTeam\LogViewer\Tables\StatsTable;
+use NaassonTeam\LogViewer\Tests\TestCase;
 
 /**
  * Class     StatsTableTest
  *
- * @package  Naasson\LogViewer\Tests\Tables
+ * @package  NaassonTeam\LogViewer\Tests\Tables
  * @author   NaassonTeam <info@naasson.com>
  */
 class StatsTableTest extends TestCase
@@ -21,7 +21,7 @@ class StatsTableTest extends TestCase
      | -----------------------------------------------------------------
      */
 
-    /** @var  \Naasson\LogViewer\Tables\StatsTable */
+    /** @var  \NaassonTeam\LogViewer\Tables\StatsTable */
     private $table;
 
     /** @var array */
@@ -117,8 +117,8 @@ class StatsTableTest extends TestCase
     /** @test */
     public function it_can_get_stats_table_via_log_viewer(): void
     {
-        /** @var  \Naasson\LogViewer\Contracts\LogViewer  $logViewer */
-        $logViewer = $this->app->make(\Naasson\LogViewer\Contracts\LogViewer::class);
+        /** @var  \NaassonTeam\LogViewer\Contracts\LogViewer  $logViewer */
+        $logViewer = $this->app->make(\NaassonTeam\LogViewer\Contracts\LogViewer::class);
 
         static::assertTable($logViewer->statsTable());
     }
@@ -126,7 +126,7 @@ class StatsTableTest extends TestCase
     /** @test */
     public function it_can_get_stats_table_via_log_factory(): void
     {
-        /** @var  \Naasson\LogViewer\Contracts\Utilities\Factory  $logFactory */
+        /** @var  \NaassonTeam\LogViewer\Contracts\Utilities\Factory  $logFactory */
         $logFactory = $this->app->make(\Naasson\LogViewer\Contracts\Utilities\Factory::class);
 
         static::assertTable($logFactory->statsTable());

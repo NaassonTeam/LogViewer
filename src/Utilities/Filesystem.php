@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Utilities;
+namespace NaassonTeam\LogViewer\Utilities;
 
-use Naasson\LogViewer\Contracts\Utilities\Filesystem as FilesystemContract;
-use Naasson\LogViewer\Exceptions\FilesystemException;
-use Naasson\LogViewer\Helpers\LogParser;
+use NaassonTeam\LogViewer\Contracts\Utilities\Filesystem as FilesystemContract;
+use NaassonTeam\LogViewer\Exceptions\FilesystemException;
+use NaassonTeam\LogViewer\Helpers\LogParser;
 use Exception;
 use Illuminate\Filesystem\Filesystem as IlluminateFilesystem;
 
 /**
  * Class     Filesystem
  *
- * @package  Naasson\LogViewer\Utilities
+ * @package  NaassonTeam\LogViewer\Utilities
  * @author   NaassonTeam <info@naasson.com>
  */
 class Filesystem implements FilesystemContract
@@ -229,7 +229,7 @@ class Filesystem implements FilesystemContract
      *
      * @return string
      *
-     * @throws \Naasson\LogViewer\Exceptions\FilesystemException
+     * @throws \NaassonTeam\LogViewer\Exceptions\FilesystemException
      */
     public function read($date)
     {
@@ -252,7 +252,7 @@ class Filesystem implements FilesystemContract
      *
      * @return bool
      *
-     * @throws \Naasson\LogViewer\Exceptions\FilesystemException
+     * @throws \NaassonTeam\LogViewer\Exceptions\FilesystemException
      */
     public function delete($date)
     {

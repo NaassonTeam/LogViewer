@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Tests\Commands;
+namespace NaassonTeam\LogViewer\Tests\Commands;
 
-use Naasson\LogViewer\Tests\TestCase;
+use NaassonTeam\LogViewer\Tests\TestCase;
 
 /**
  * Class     PublishCommandTest
  *
- * @package  Naasson\LogViewer\Tests\Commands
+ * @package  NaassonTeam\LogViewer\Tests\Commands
  * @author   NaassonTeam <info@naasson.com>
  */
 class PublishCommandTest extends TestCase
@@ -124,7 +124,7 @@ class PublishCommandTest extends TestCase
 
         static::assertEmpty(
             $missing = array_diff($locales, static::$locales),
-            'The locales ['.implode(', ', $missing).'] are missing in the Naasson\\LogViewer\\Tests\\TestCase::$locales (line 29) for tests purposes.'
+            'The locales ['.implode(', ', $missing).'] are missing in the NaassonTeam\\LogViewer\\Tests\\TestCase::$locales (line 29) for tests purposes.'
         );
 
         foreach ($directories as $directory) {

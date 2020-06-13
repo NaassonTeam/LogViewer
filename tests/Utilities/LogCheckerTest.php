@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Tests\Utilities;
+namespace NaassonTeam\LogViewer\Tests\Utilities;
 
-use Naasson\LogViewer\Tests\TestCase;
-use Naasson\LogViewer\Utilities\LogChecker;
+use NaassonTeam\LogViewer\Tests\TestCase;
+use NaassonTeam\LogViewer\Utilities\LogChecker;
 
 /**
  * Class     LogCheckerTest
  *
- * @package  Naasson\LogViewer\Tests\Utilities
+ * @package  NaassonTeam\LogViewer\Tests\Utilities
  * @author   NaassonTeam <info@naasson.com>
  */
 class LogCheckerTest extends TestCase
@@ -20,7 +20,7 @@ class LogCheckerTest extends TestCase
      | -----------------------------------------------------------------
      */
 
-    /** @var  \Naasson\LogViewer\Utilities\LogChecker */
+    /** @var  \NaassonTeam\LogViewer\Utilities\LogChecker */
     private $checker;
 
     /* -----------------------------------------------------------------
@@ -32,7 +32,7 @@ class LogCheckerTest extends TestCase
     {
         parent::setUp();
 
-        $this->checker = $this->app->make(\Naasson\LogViewer\Contracts\Utilities\LogChecker::class);
+        $this->checker = $this->app->make(\NaassonTeam\LogViewer\Contracts\Utilities\LogChecker::class);
     }
 
     protected function tearDown(): void

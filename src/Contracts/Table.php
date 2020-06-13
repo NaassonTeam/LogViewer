@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Contracts;
+namespace NaassonTeam\LogViewer\Contracts;
 
 /**
  * Interface  Table
  *
- * @package   Naasson\LogViewer\Contracts
+ * @package   NaassonTeam\LogViewer\Contracts
  * @author    NaassonTeam <info@naasson.com>
  */
 interface Table

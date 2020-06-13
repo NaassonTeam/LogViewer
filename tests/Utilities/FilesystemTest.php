@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Tests\Utilities;
+namespace NaassonTeam\LogViewer\Tests\Utilities;
 
-use Naasson\LogViewer\Tests\TestCase;
-use Naasson\LogViewer\Utilities\Filesystem;
+use NaassonTeam\LogViewer\Tests\TestCase;
+use NaassonTeam\LogViewer\Utilities\Filesystem;
 
 /**
  * Class     FilesystemTest
  *
- * @package  Naasson\LogViewer\Tests\Utilities
+ * @package  NaassonTeam\LogViewer\Tests\Utilities
  * @author   NaassonTeam <info@naasson.com>
  */
 class FilesystemTest extends TestCase

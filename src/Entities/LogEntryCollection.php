@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Entities;
+namespace NaassonTeam\LogViewer\Entities;
 
-use Naasson\LogViewer\Helpers\LogParser;
+use NaassonTeam\LogViewer\Helpers\LogParser;
 use Illuminate\Pagination\LengthAwarePaginator;
 use Illuminate\Support\LazyCollection;
 
 /**
  * Class     LogEntryCollection
  *
- * @package  Naasson\LogViewer\Entities
+ * @package  NaassonTeam\LogViewer\Entities
  * @author   NaassonTeam <info@naasson.com>
  */
 class LogEntryCollection extends LazyCollection

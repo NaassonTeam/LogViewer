@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Contracts;
+namespace NaassonTeam\LogViewer\Contracts;
 
 /**
  * Interface  LogViewer
  *
- * @package   Naasson\LogViewer\Contracts
+ * @package   NaassonTeam\LogViewer\Contracts
  * @author    NaassonTeam <info@naasson.com>
  */
 interface LogViewer extends Patternable
@@ -52,7 +52,7 @@ interface LogViewer extends Patternable
     /**
      * Get all logs.
      *
-     * @return \Naasson\LogViewer\Entities\LogCollection
+     * @return \NaassonTeam\LogViewer\Entities\LogCollection
      */
     public function all();
 
@@ -70,7 +70,7 @@ interface LogViewer extends Patternable
      *
      * @param  string  $date
      *
-     * @return \Naasson\LogViewer\Entities\Log
+     * @return \NaassonTeam\LogViewer\Entities\Log
      */
     public function get($date);
 
@@ -80,7 +80,7 @@ interface LogViewer extends Patternable
      * @param  string  $date
      * @param  string  $level
      *
-     * @return \Naasson\LogViewer\Entities\LogEntryCollection
+     * @return \NaassonTeam\LogViewer\Entities\LogEntryCollection
      */
     public function entries($date, $level = 'all');
 
@@ -107,7 +107,7 @@ interface LogViewer extends Patternable
      *
      * @param  string|null  $locale
      *
-     * @return \Naasson\LogViewer\Tables\StatsTable
+     * @return \NaassonTeam\LogViewer\Tables\StatsTable
      */
     public function statsTable($locale = null);
 
@@ -118,7 +118,7 @@ interface LogViewer extends Patternable
      *
      * @return bool
      *
-     * @throws \Naasson\LogViewer\Exceptions\FilesystemException
+     * @throws \NaassonTeam\LogViewer\Exceptions\FilesystemException
      */
     public function delete($date);
 

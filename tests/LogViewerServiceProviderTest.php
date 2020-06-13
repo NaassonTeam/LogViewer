@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Tests;
+namespace NaassonTeam\LogViewer\Tests;
 
 use Naasson\LogViewer\LogViewerServiceProvider;
 

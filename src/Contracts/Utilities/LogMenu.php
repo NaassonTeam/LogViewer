@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Contracts\Utilities;
+namespace NaassonTeam\LogViewer\Contracts\Utilities;
 
-use Naasson\LogViewer\Entities\Log;
+use NaassonTeam\LogViewer\Entities\Log;
 use Illuminate\Contracts\Config\Repository as ConfigContract;
 
 /**
  * Interface  LogMenu
  *
- * @package   Naasson\LogViewer\Contracts\Utilities
+ * @package   NaassonTeam\LogViewer\Contracts\Utilities
  * @author    NaassonTeam <info@naasson.com>
  */
 interface LogMenu
@@ -32,7 +32,7 @@ interface LogMenu
     /**
      * Set the log styler instance.
      *
-     * @param  \Naasson\LogViewer\Contracts\Utilities\LogStyler  $styler
+     * @param  \NaassonTeam\LogViewer\Contracts\Utilities\LogStyler  $styler
      *
      * @return self
      */
@@ -46,7 +46,7 @@ interface LogMenu
     /**
      * Make log menu.
      *
-     * @param  \Naasson\LogViewer\Entities\Log  $log
+     * @param  \NaassonTeam\LogViewer\Entities\Log  $log
      * @param  bool                               $trans
      *
      * @return array

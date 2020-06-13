@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Naasson\LogViewer\Tests\Utilities;
+namespace NaassonTeam\LogViewer\Tests\Utilities;
 
-use Naasson\LogViewer\Utilities\LogLevels;
-use Naasson\LogViewer\Tests\TestCase;
+use NaassonTeam\LogViewer\Utilities\LogLevels;
+use NaassonTeam\LogViewer\Tests\TestCase;
 
 /**
  * Class     LogLevelsTest
  *
- * @package  Naasson\LogViewer\Tests\Utilities
+ * @package  NaassonTeam\LogViewer\Tests\Utilities
  * @author   NaassonTeam <info@naasson.com>
  */
 class LogLevelsTest extends TestCase
@@ -20,7 +20,7 @@ class LogLevelsTest extends TestCase
      | -----------------------------------------------------------------
      */
 
-    /** @var  \Naasson\LogViewer\Utilities\LogLevels  */
+    /** @var  \NaassonTeam\LogViewer\Utilities\LogLevels  */
     private $levels;
 
     /* -----------------------------------------------------------------
@@ -32,7 +32,7 @@ class LogLevelsTest extends TestCase
     {
         parent::setUp();
 
-        $this->levels = $this->app->make(\Naasson\LogViewer\Contracts\Utilities\LogLevels::class);
+        $this->levels = $this->app->make(\NaassonTeam\LogViewer\Contracts\Utilities\LogLevels::class);
     }
 
     public function tearDown(): void
